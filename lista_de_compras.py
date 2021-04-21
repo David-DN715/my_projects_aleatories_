@@ -1,23 +1,21 @@
-# O codigo abaixo é uma lista de compras!
+#O Codigo abaixo é uma lista de compras feita com metodos de listas e funções!
 
 #A função abaixo faz aparecer um menu de opções!
 def menu():
     print("1 - adionar item na lista")
     print("2 - para excluir item da lista")
     print("0 - para sair!")
+    print(lista1)
 
 
-#O for abaixo permite passa pelos elemntos da lista e se encontrar apagar o item!
+#O funçao abaixo permite apagar o item!
 def remover(item):
-    for item in lista1:
         if item in lista1:
-            remover=input("deseja remover da lista?")=="sim"
-            if remover == "sim":
-                lista.remove(itens)
+             lista1.remove(item)
         else:
-            print("Não encontrado!...")
-            return lista1
-
+            print("Não encontrado...")
+        return lista1
+        
 # o funcao abaixo permite adicionar um elemento a lista1 de compras!
 def adicionar_lista1(prod):
     lista1.append(prod)
@@ -35,7 +33,7 @@ opcao = int(input("Digite a opção desejada:\n"))
 #Começa o codigo principal!
 while continuar:
     os.system('clr')
-    input("Press any key...!")
+    print(lista1)
     if opcao == 1:
         rept = True
         while rept:
@@ -44,9 +42,9 @@ while continuar:
         menu()
         opcao = int(input("Digite a opção desejada:\n"))
     elif opcao == 2:
-        remover(item = input("Digite item a apagar:\n"))
-        print(lista1)
-        
+        remover(item=input("Digite item a apagar:\n"))
+        menu()
+        opcao = int(input("Digite a opção desejada:\n"))
     elif opcao == 0:
         continuar = False
     else:
